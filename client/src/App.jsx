@@ -86,7 +86,7 @@ function UserDashboard() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch(`http://${window.location.hostname}:3001/api/forms`)
+    fetch('/forms.json')
       .then(res => res.json())
       .then(data => setForms(data))
       .catch(err => console.error(err))

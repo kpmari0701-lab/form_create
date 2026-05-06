@@ -9,12 +9,19 @@ export default function FormRenderer() {
   const [repeaterCounts, setRepeaterCounts] = useState({})
   
   useEffect(() => {
-    fetch(`http://${window.location.hostname}:3001/api/forms/${id}`)
+    fetch(`/forms.json`)
       .then(res => {
         if (!res.ok) throw new Error('Not found')
         return res.json()
       })
-      .then(data => setForm(data))
+      .then(data => {
+        const foundForm = data.find(f => f.id === id)
+        if (foundForm) {
+          setForm(foundForm)
+        } else {
+          throw new Error('Form not found')
+        }
+      })
       .catch(err => {
         console.error(err)
         navigate(-1)
@@ -79,7 +86,7 @@ export default function FormRenderer() {
       <header>
         {form.formImage && (
           <img 
-            src={form.formImage.startsWith('/assets/') ? `http://${window.location.hostname}:3001${form.formImage}` : form.formImage} 
+            src={form.formImage} 
             alt="Header" 
             style={{ maxWidth: '100%', maxHeight: '300px', display: 'block', margin: '0 auto 15px auto', borderRadius: '8px' }} 
           />

@@ -98,7 +98,7 @@ export default function FormBuilder() {
       <input type="text" value={title} onChange={e => setTitle(e.target.value)} />
 
       <label>Form Header Image (Optional)</label>
-      {formImage && <img src={formImage.startsWith('/assets/') ? `http://${window.location.hostname}:3001${formImage}` : formImage} alt="Header" style={{ maxWidth: '100%', maxHeight: '200px', display: 'block', marginBottom: '10px' }} />}
+      {formImage && <img src={formImage} alt="Header" style={{ maxWidth: '100%', maxHeight: '200px', display: 'block', marginBottom: '10px' }} />}
       <input 
         type="file" 
         accept="image/*" 
