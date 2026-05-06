@@ -11,8 +11,8 @@ app.use(cors());
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
-const formsFile = path.join(__dirname, 'forms.json');
-const assetsDir = path.join(__dirname, 'assets');
+const formsFile = path.join(__dirname, '../client/public/forms.json');
+const assetsDir = path.join(__dirname, '../client/public/assets');
 
 // Ensure forms.json exists
 if (!fs.existsSync(formsFile)) {
