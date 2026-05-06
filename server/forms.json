@@ -1,0 +1,28 @@
+[
+  {
+    "id": "015b7d2c-9798-403b-9017-b9768e2272d6",
+    "title": "வருமான சான்றிதழ் ",
+    "formImage": "/assets/1ab8245f-dc96-4b5d-835c-69d54f677bc1.png",
+    "whatsappFooterText": "Your application is submitted... \nwaiting for few days....\n\nஆவணங்களை பதிவேற்றவும்....\n1,Photo,புகைப்படம்\n2,ஆதார் கார்டு\n3,ரேஷன் கார்டு\n4,sign& கையொப்பம்\n\npayment : 60₹ only💰\nநன்றி!",
+    "questions": [
+      {
+        "id": "q_1778075066614",
+        "label": "பெயர் :",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "q_1778075118372",
+        "label": "Name :",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "q_1778075651017",
+        "label": "Question 3",
+        "type": "dropdown",
+        "required": true
+      }
+    ]
+  }
+]
